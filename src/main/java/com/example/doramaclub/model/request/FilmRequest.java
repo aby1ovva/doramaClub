@@ -1,13 +1,9 @@
 package com.example.doramaclub.model.request;
 
 
-import com.example.doramaclub.entity.Genre;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -17,12 +13,14 @@ import javax.persistence.ManyToOne;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class FilmRequest {
 
-    String name;
+    String title;
 
     int productionYear;
 
     String description;
 
-    Genre genre;
+    Long genreId;
+
+    MultipartFile video;
 
 }

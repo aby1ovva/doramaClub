@@ -19,7 +19,7 @@ public class Film {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    String name;
+    String title;
 
     int productionYear;
 
@@ -28,6 +28,8 @@ public class Film {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "genre_id")
     Genre genre;
+
+    String videoPath;
 
 
 }

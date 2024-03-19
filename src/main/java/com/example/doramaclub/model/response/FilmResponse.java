@@ -3,6 +3,7 @@ package com.example.doramaclub.model.response;
 import com.example.doramaclub.entity.Genre;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
@@ -17,12 +18,11 @@ import javax.persistence.ManyToOne;
 public class FilmResponse {
     Long id;
 
-    String name;
+    String title;
 
     int productionYear;
 
     String description;
-
 
     Genre genre;
 
